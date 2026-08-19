@@ -40,8 +40,3 @@ Suggested provider priority:
 The cron route at `/api/cron/daily` determines the prior calendar date in `America/Los_Angeles`, calls provider adapters, stores source-backed performances and season stats, computes performance scores, generates constrained data-only summaries, resolves source-linked news/video, and upserts the daily archive page.
 
 The current scaffold intentionally ships with zero live provider adapters so it cannot accidentally publish unverified data.
-
-
-## Live game status and where-to-watch
-
-The UI now supports a verified **LIVE NOW** state for tracked players. Provider adapters may implement `getLiveGamesForPlayers()` and return game status, score, inning/game detail, and watch information. Watch links are rendered only when a provider supplies a verified URL; otherwise the site shows `Broadcast info unavailable` / `No verified watch link`. The demo live card is explicitly labeled as placeholder data.
